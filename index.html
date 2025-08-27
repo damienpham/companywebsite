@@ -1337,7 +1337,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        <!-- @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
@@ -1413,8 +1413,150 @@
             .device-value {
                 font-size: 1.5rem;
             }
+        } -->
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            /* Hero section fixes - THESE WERE MISSING */
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+                padding: 100px 0 60px;
+            }
+            
+            .hero-visual {
+                order: 1;
+            }
+            
+            .hero-text {
+                order: 0;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                margin: 0 auto;
+            }
+            
+            .hero-logo {
+                width: 280px;
+                height: 280px;
+                margin-bottom: 2rem;
+            }
+            
+            .hero-text .subtitle {
+                font-size: 1.1rem;
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .advanced-dashboard {
+                transform: none;
+                padding: 2rem;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            /* End of hero section fixes */
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .device-grid {
+                grid-template-columns: 1fr;
+                max-height: 280px;
+                padding-right: 4px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+                margin: 1rem 0;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
+            }
+
+            .plan-price .price {
+                font-size: 2.5rem;
+            }
+
+            .counter-display {
+                font-size: 3rem;
+            }
+
+            .device-list {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .activity-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .activity-status {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 0.5rem;
+            }
+
+            .live-activity {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .device-card {
+                min-height: 100px;
+                padding: 1.25rem;
+            }
+
+            .device-value {
+                font-size: 1.5rem;
+            }
         }
 
+        /* Add this additional media query for very small screens */
+        @media (max-width: 480px) {
+            .hero-logo {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .hero-text .subtitle {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .container {
+                padding: 0 12px;
+            }
+            
+            .advanced-dashboard {
+                padding: 1.5rem;
+            }
+        }        
         /* Scroll Animations */
         .animate-on-scroll {
             opacity: 0;
@@ -1440,7 +1582,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#contact">Services</a></li>
+                <li><a href="#pricing">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <a href="#contact" class="cta-button">Contact: 0406 162 755</a>
@@ -1759,7 +1901,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section animate-on-scroll">
+    <section class="pricing-section animate-on-scroll" id="pricing">
         <div class="container">
             <div class="pricing-header">
                 <h2>Choose Your AUTOSTART Plan</h2>
