@@ -1576,6 +1576,19 @@
         footer a:hover {
             text-decoration: underline;
         }
+        a.brand-tagline[href^="mailto:"] {
+            text-decoration: none;
+        }
+
+        a.brand-tagline {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a.brand-tagline:hover {
+            color: #007bff; /* or your preferred hover color */
+            /* Still no underline on hover */
+        }
     </style>
 </head>
 <body>
@@ -1586,6 +1599,7 @@
                 <div class="brand-text">
                     <div class="brand-name">AUTOSTART</div>
                     <div class="brand-tagline">IoT Integration & Automation</div>
+                    <a class="brand-tagline" href="mailto:info@autostart.au?subject=Inquiry&body=Hello, I would like to know more about your IoT solutions.">info@autostart.au</a>
                 </div>
             </div>
             <ul class="nav-links">
